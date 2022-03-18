@@ -4,9 +4,10 @@ import {
           
             createUserDocumentFromAuth 
         } from "../../utils/firebase/firebase.utils";
+import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+import Button from "../../components/button/button.component";
 
-
-const SignIn = ()=> {
+const Authentication = ()=> {
     const logGoogleUser = async() => {
         const {user} = await signInWithGooglePopup();
         const userDocRef = await createUserDocumentFromAuth(user);
@@ -15,10 +16,11 @@ const SignIn = ()=> {
     };
     
     return (
-        <div><p>this is a sign ui page</p>
-        <button onClick={logGoogleUser}>
-        Sign in with Google Popup
-        </button>
+        <div>
+        <Button  buttonType= 'google' onClick={logGoogleUser}>
+        Sign in with Gmail
+        </Button>
+        <SignUpForm/>
        </div>
 
        
@@ -27,4 +29,4 @@ const SignIn = ()=> {
     
 };
 
-export default SignIn;
+export default Authentication;
