@@ -39,7 +39,7 @@ const SignUpForm =()=> {
                 alert('User Already Exist')
 
             }
-            console.log('user creation error', error);
+          
         }
     }
    
@@ -92,7 +92,7 @@ const SignUpForm =()=> {
                 name='confirmPassword'
                 value={confirmPassword}/>
 
-            <Button   type = 'submit'>Sign Up</Button>
+            <Button  buttonType='inverted' type = 'submit'>Sign Up</Button>
 
         </form>
         </div>
