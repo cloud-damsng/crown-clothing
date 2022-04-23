@@ -26,3 +26,4 @@ export const CategoriesProvider = ({ children }) => {
     </CategoriesContext.Provider>
   );
 };
+//normal comment
