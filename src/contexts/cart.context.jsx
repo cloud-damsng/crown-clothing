@@ -116,14 +116,7 @@ dispatch(
 );
 };
 
-    /* 
-    dispatch new action wiith payload = {
-      newCartItems,
-      newCartTotal,
-      newCartCount
-    }
-    */
-  }
+ 
 
   const addItemToCart = (productToAdd) => {
     const newCartItems = addCartItem(cartItems, productToAdd);
@@ -155,5 +148,5 @@ dispatch(
     cartTotal,
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 };
